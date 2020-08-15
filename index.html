@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" href="style.css">
+        <title>Tea Tasting Notes</title>
+	</head>
+	<body>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA60Su9kB_ZY5Rcpw67jp5EbxZZmL2I8mY",
+    authDomain: "tea-notes.firebaseapp.com",
+    databaseURL: "https://tea-notes.firebaseio.com",
+    projectId: "tea-notes",
+    storageBucket: "tea-notes.appspot.com",
+    messagingSenderId: "1032551083432",
+    appId: "1:1032551083432:web:519b5421547daabcfdc19d"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+        <div class="chart-container"></div>
+          <br></br>
+    <center><a href="2.html" class="btn">Notes</a>
+    <a href="3.html" class="btn">Gallery</a>
+    <a href="4.html" class="btn">Likes</a>
+    <a href="5.html" class="btn">Brand</a></center>
+</body>
+<form action="#" method="post">
+    
+
+    
+    <fieldset>
+        <div>
+            <label for="password" class="mid">총점</label>
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+        </div>
+        <div>
+            <label for="password" class="mid">브랜드</label>
+           <input type="text" name="name" id="name" value="" tabindex="1">
+        </div>
+
+    <div>
+        <label for="name" class="mid">이름</label>
+        <input type="text" name="name" id="name" value="" tabindex="1">
+    </div>
+  
+    <div>
+        <label for="name" class="mid">사진</label>
+        <script>
+            $success = move_uploaded_file($myFile["tmp_name"],"upload/" . $name);
+               if (!$success) {
+                   echo '<div class="alert alert-danger" role="alert"> Sorry unable to upload file </div>';
+                  exit;
+               }
+             else
+            {
+               chmod("upload/" . $name, 0644);
+            echo '<div class="alert alert-success" role="alert"> Your file is successfully uploaded </div>';
+              }
+            </script>
+            
+            <form  method="post" action="upload.php" enctype="multipart/form-data">
+            <input type="file" name="image">  
+            <br/>
+            </form>
+        
+    </div>
+
+
+    <div>
+        <label for="password" class="mid">일시</label>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
+
+    <!-- Here by using Id selector the datetime picker will load on this input element -->
+    <input id="datetimepicker" type="text">
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
+    <script src="http://cdn.craig.is/js/rainbow-custom.min.js"></script>
+    <script>
+          $(document).ready(function() {
+                $.datetimepicker.setLocale('pt-BR');
+               $('#datetimepicker').datetimepicker();
+          });
+    </script>
+    </div>
+
+    <div>
+        <label for="select-choice-2" class="mid">다류</label>
+        <select name="extraoptions" id="select-choice-2">
+	          <optgroup label="　">
+		            <option value="Choice 1">홍차</option>
+                <option value="Choice 2">녹차</option>
+                <option value="Choice 3">백차</option>
+                <option value="Choice 4">청차</option>
+                <option value="Choice 5">황차</option>
+                <option value="Choice 6">흑차</option>
+		          </optgroup>
+        </select>
+    </div>
+      
+    <div>
+        <label for="select-choice-2" class="mid">종류</label>
+        <select name="extraoptions" id="select-choice-2">
+	          <optgroup label="　">
+		            <option value="Choice 1">잎차</option>
+                <option value="Choice 2">티백</option>
+                <option value="Choice 3">분말</option>
+		          </optgroup>
+        </select>
+    </div>
+  
+ 
+    <div>
+        <label for="textarea">블렌딩 정보</label>
+        <textarea cols="40" rows="10" name="textarea" id="textarea"></textarea>
+    </div>
+            
+    <div>
+        <label for="password" class="mid">추출 방식</label>
+       <input type="text" name="name" id="name" value="" tabindex="1">
+    </div>
+
+    <div>
+        <label for="password" class="mid">추출 도구</label>
+       <input type="text" name="name" id="name" value="" tabindex="1">
+    </div>
+      
+    <div>
+        <label for="password" class="mid">추출 온도</label>
+       <input type="text" name="name" id="name" value="" tabindex="1">
+    </div>
+      
+     <div>
+        <label for="password" class="mid">추출 시간</label>
+       <input type="text" name="name" id="name" value="" tabindex="1">
+    </div>
+      
+     <div>
+        <label for="password" class="mid">물의 양</label>
+       <input type="text" name="name" id="name" value="" tabindex="1">
+    </div>
+      
+     <div>
+        <label for="password" class="mid">물의 종류</label>
+        <select name="extraoptions" id="select-choice-2">
+	          <optgroup label="　">
+		            <option value="Choice 1">연수</option>
+                <option value="Choice 2">경수</option>
+		          </optgroup>
+        </select>
+    </div>
+      
+      <div>
+        <label for="password" class="mid">찻잎의 양</label>
+       <input type="text" name="name" id="name" value="" tabindex="1">
+    </div>
+    
+
+    <div>
+        <label for="password" class="mid">건엽</label>
+        <textarea cols="40" rows="10" name="textarea" id="textarea"></textarea>
+    </div>
+
+    <div>
+        <label for="password" class="mid">젖은 잎</label>
+        <textarea cols="40" rows="10" name="textarea" id="textarea"></textarea>
+    </div>
+
+    <div>
+        <label for="password" class="mid">음료</label>
+        <textarea cols="40" rows="10" name="textarea" id="textarea"></textarea>
+    </div>
+
+
+    <div>
+        <input type="submit" value="Submit" class="submit">
+        </div>
+
+        
+
+    </fieldset>
+</form>
+</html>
